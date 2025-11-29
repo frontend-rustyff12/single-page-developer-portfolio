@@ -3,7 +3,7 @@ import "./globals.css";
 import spaceGrotesk from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Adam Keys Developer Profile",
+  title: "Frontend Mentor | Single-page developer portfolio",
   description: "Developer profile and portfolio for Adam Keyes",
 };
 
