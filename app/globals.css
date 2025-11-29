@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "SpceGrotesk";
+  src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-weight: swap;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -10,6 +18,7 @@
   --grey: #242424;
   --light-accent: #d9d9d9;
   --white: #ffffff;
+  --main-font: SpceGrotesk;
 }
 
 html,
@@ -17,10 +26,16 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--main-font), sans-serif;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
 }
 
 /* Typography */
@@ -38,7 +53,7 @@ a {
 }
 
 .heading-l {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 56px;
   letter-spacing: -1.5px;
 }
@@ -50,4 +65,26 @@ a {
 .medium-text {
   font-size: 18px;
   line-height: 28px;
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -10px;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
 }

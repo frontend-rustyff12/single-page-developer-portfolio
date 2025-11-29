@@ -16,16 +16,6 @@ import largeFive from "@/public/images/thumbnail-project-5-large.webp";
 import smallSix from "@/public/images/thumbnail-project-6-small.webp";
 import largeSix from "@/public/images/thumbnail-project-6-large.webp";
 
-export type Project = {
-  title: string;
-  img: {
-    small: string;
-    large: string;
-    alt: string;
-  };
-  tags: string[];
-};
-
 export const projectsData = [
   {
     title: "Design Portfolio",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import spaceGrotesk from "@/lib/fonts";
+// import spaceGrotesk from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Single-page developer portfolio",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={spaceGrotesk.variable}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }

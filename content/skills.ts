@@ -1,8 +1,4 @@
-export type Skill = {
-  name: string;
-  years: number;
-};
-export const skillsData: Skill[] = [
+export const skillsData = [
   { name: "HTML", years: 4 },
   { name: "CSS", years: 4 },
   { name: "JavaScript", years: 4 },

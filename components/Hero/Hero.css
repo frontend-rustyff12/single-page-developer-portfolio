@@ -1,0 +1,73 @@
+:root {
+  --black: #151515;
+  --accent: #4ee1a0;
+  --grey: #242424;
+  --light-accent: #d9d9d9;
+  --white: #ffffff;
+  --main-font: SpceGrotesk;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.hero-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.hero-nav-container div ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.hero-image-container {
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  height: 385px;
+}
+
+.hero-text-container {
+  margin-top: 310px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-text-container h2 span {
+  position: relative;
+}
+
+.hero-text-container h2 span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--accent);
+  bottom: 3px;
+}
+
+.rings {
+  position: absolute;
+  top: 125px;
+  left: -342px;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  top: 255px;
+  right: -65;
+  z-index: 0;
+}
