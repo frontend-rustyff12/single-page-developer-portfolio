@@ -88,3 +88,11 @@ li {
   height: 4px;
   background: var(--accent);
 }
+
+.break {
+  height: 1px;
+  background-color: var(--light-accent);
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 80px;
+}

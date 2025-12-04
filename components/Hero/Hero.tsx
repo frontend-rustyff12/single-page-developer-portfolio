@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./Hero.css";
-import Button from "../Button";
+import Button from "@/components/ui/Button";
+import Break from "@/components/ui/Break";
 import type { HeroData, Social, ButtonData } from "@/lib/types";
 import rings from "@/public/images/pattern-rings.svg";
 import circle from "@/public/images/pattern-circle.svg";
@@ -20,53 +21,62 @@ export default function Hero({
   btn,
 }: HeroProps) {
   return (
-    <header className="hero-container">
-      <nav className="hero-nav-container">
-        <h1>{title}</h1>
-        <div>
-          <ul>
-            {socials.map((social) => (
-              <li key={social.name}>
-                <a
-                  href={social.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                  aria-label={`Visit my ${social.name} profile`}
-                >
-                  <Image
-                    src={social.image}
-                    width={20}
-                    height={20}
-                    alt=""
-                    className="social-icon"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
+    <>
+      <header className="hero-container">
+        <nav className="hero-nav-container">
+          <h1>{title}</h1>
+          <div>
+            <ul>
+              {socials.map((social) => (
+                <li key={social.name}>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-link"
+                    aria-label={`Visit my ${social.name} profile`}
+                  >
+                    <Image
+                      src={social.image}
+                      width={20}
+                      height={20}
+                      alt=""
+                      className="social-icon"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+
+        <div className="hero-image-container">
+          <picture>
+            <source media="(min-width: 1024px)" srcSet={image.desktop.src} />
+            <source media="(min-width: 768px)" srcSet={image.tablet.src} />
+            <Image src={image.mobile.src} alt={image.alt} fill priority />
+          </picture>
         </div>
-      </nav>
 
-      <div className="hero-image-container">
-        <picture>
-          <source media="(min-width: 1024px)" srcSet={image.desktop.src} />
-          <source media="(min-width: 768)" srcSet={image.tablet.src} />
-          <Image src={image.mobile} alt={image.alt} width={175} priority />
-        </picture>
-      </div>
+        <article className="hero-text-container">
+          <h2 className="heading-l">
+            {heroTitle}
+            <span>{name}</span>.
+          </h2>
+          <p className="medium-text">{intro}</p>
+          <Button name={btn.name} link={btn.link} />
+        </article>
 
-      <article className="hero-text-container">
-        <h2 className="heading-l">
-          {heroTitle}
-          <span>{name}</span>.
-        </h2>
-        <p className="medium-text">{intro}</p>
-        <Button name={btn.name} link={btn.link} />
-      </article>
-
-      <Image className="rings" src={rings} height={130} alt="" />
-      <Image className="circle" src={circle} height={130} width={130} alt="" />
-    </header>
+        <Image className="rings" src={rings} height={130} alt="" />
+        <Image
+          className="circle"
+          src={circle}
+          height={130}
+          width={130}
+          alt=""
+        />
+      </header>
+      <Break />
+    </>
   );
 }
