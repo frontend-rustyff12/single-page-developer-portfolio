@@ -20,8 +20,8 @@ export type ResponsiveImage = {
 
 export type HeroData = {
   title: string;
-  heroTitle: string;
-  name: string;
+  //   heroTitle: string;
+  //   name: string;
   intro: string;
   image: ResponsiveImage;
 };

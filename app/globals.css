@@ -11,6 +11,12 @@
   padding: 0;
   margin: 0;
 }
+/* 
+*,
+*::before,
+*::after {
+  border: 1px solid red;
+} */
 
 :root {
   --black: #151515;
@@ -47,9 +53,9 @@ li {
 }
 
 .heading-xl {
-  font-size: 88px;
-  line-height: 88px;
-  letter-spacing: -2.5px;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -1.14px;
 }
 
 .heading-l {
@@ -67,6 +73,21 @@ li {
   line-height: 28px;
 }
 
+@media screen and (min-width: 768px) {
+  .heading-xl {
+    font-size: 72px;
+    line-height: 72px;
+    letter-spacing: -2.05px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .heading-xl {
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -2.5px;
+  }
+}
+
 .btn {
   font-size: 16px;
   line-height: 26px;
@@ -76,7 +97,7 @@ li {
   position: relative;
   display: inline-block;
   width: max-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .btn::after {

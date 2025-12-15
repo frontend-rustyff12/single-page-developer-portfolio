@@ -8,8 +8,8 @@ import twitter from "@/public/images/icon-twitter.svg";
 
 export const heroData = {
   title: "adamkeyes",
-  heroTitle: "Nice to meet you! I'm ",
-  name: "Adam Keyes",
+  //   heroTitle: "Nice to meet you! I'm ",
+  //   name: "Adam Keyes",
   intro:
     "Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.",
   image: {

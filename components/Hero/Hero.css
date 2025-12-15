@@ -46,6 +46,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -98,17 +99,20 @@
     right: 0;
     z-index: 1;
     height: 600px;
-    width: 372px;
+    width: 322px;
   }
 
   .hero-text-container {
-    margin-top: 150px;
+    position: absolute;
     height: 450px;
     width: 445px;
-    border: 1px solid red;
-    /* text-align: center; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 1.5rem; */
+    top: 150;
+    left: 32px;
+    margin-top: 0;
+    gap: 1.5rem;
+    text-align: left;
+    align-items: start;
+    /* background-color: red; */
+    z-index: 5;
   }
 }

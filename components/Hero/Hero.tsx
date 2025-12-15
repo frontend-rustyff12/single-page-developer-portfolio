@@ -11,15 +11,7 @@ type HeroProps = HeroData & {
   btn: ButtonData;
 };
 
-export default function Hero({
-  title,
-  heroTitle,
-  name,
-  intro,
-  image,
-  socials,
-  btn,
-}: HeroProps) {
+export default function Hero({ title, intro, image, socials, btn }: HeroProps) {
   return (
     <>
       <header className="hero-container">
@@ -59,9 +51,8 @@ export default function Hero({
         </div>
 
         <article className="hero-text-container">
-          <h2 className="heading-l">
-            {heroTitle}
-            <span>{name}</span>.
+          <h2 className="heading-xl">
+            Nice to meet you! I'm <span>Adam Keyes</span>.
           </h2>
           <p className="medium-text">{intro}</p>
           <Button name={btn.name} link={btn.link} />
