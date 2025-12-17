@@ -68,7 +68,7 @@ export default function Hero({ title, intro, image, socials, btn }: HeroProps) {
           alt=""
         />
       </header>
-      <Break />
+      <Break hideLarge={false} />
     </>
   );
 }

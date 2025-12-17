@@ -1,0 +1,71 @@
+:root {
+  --black: #151515;
+  --accent: #4ee1a0;
+  --grey: #242424;
+  --light-accent: #d9d9d9;
+  --white: #ffffff;
+  --main-font: SpceGrotesk;
+}
+
+.skills-wrapper {
+  position: relative;
+}
+
+#skills {
+  padding: 2.5rem 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 24px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.skills-rings {
+  position: absolute;
+  bottom: -65px;
+  right: -342px;
+  z-index: 0;
+}
+
+/* .skill {
+	
+} */
+/* .experience {
+
+} */
+
+@media screen and (min-width: 768px) {
+  #skills {
+    padding: 3.25rem 1.875rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 52px;
+  }
+
+  .skill-container {
+    gap: 14px;
+    text-align: start;
+  }
+
+  .skills-rings {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #skills {
+    padding: 4.5rem 10.625rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 58px;
+  }
+
+  .skills-rings {
+    bottom: 35px;
+  }
+}
