@@ -52,9 +52,10 @@ export default function Hero({ title, intro, image, socials, btn }: HeroProps) {
 
         <article className="hero-text-container">
           <h2 className="heading-xl">
-            Nice to meet you! I'm <span>Adam Keyes</span>.
+            <span className="heading-span">Nice to</span> meet you! I'm{" "}
+            <span className="heading-highlight">Adam Keyes</span>.
           </h2>
-          <p className="medium-text">{intro}</p>
+          <p className="medium-text intro">{intro}</p>
           <Button name={btn.name} link={btn.link} />
         </article>
 
