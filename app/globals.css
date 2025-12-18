@@ -103,7 +103,7 @@ li {
   position: relative;
   display: inline-block;
   width: max-content;
-  /* margin: 0 auto; */
+  height: 38px;
 }
 
 .btn::after {
