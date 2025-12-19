@@ -8,10 +8,10 @@ import { skillsData } from "@/content/skills";
 
 export default function Home() {
   return (
-    <>
+    <div className="site-wrapper">
       <Hero {...heroData} socials={socialsData} btn={btnData} />
       <Skills skills={skillsData} />
       <Projects projects={projectsData} btn={btnData} />
-    </>
+    </div>
   );
 }
