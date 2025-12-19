@@ -75,7 +75,7 @@ h2 span.heading-highlight::after {
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    padding: 1.875rem;
+    padding: 30px;
   }
 
   .hero-nav-container {
@@ -86,7 +86,7 @@ h2 span.heading-highlight::after {
   }
 
   .hero-nav-container div ul {
-    gap: 2rem;
+    gap: 32px;
   }
 
   .hero-image-container {
@@ -129,15 +129,11 @@ h2 span.heading-highlight::after {
 }
 @media screen and (min-width: 1024px) {
   .hero-container {
-    padding: 2.5rem 10.3125rem;
-  }
-
-  .hero-nav-container {
-    margin-right: 30px;
+    padding: 40px 0px;
+    margin: 0 auto;
   }
 
   .hero-image-container {
-    right: 160px;
     z-index: 1;
     height: 720px;
     width: 445px;
@@ -148,7 +144,7 @@ h2 span.heading-highlight::after {
     height: 300px;
     width: 710px;
     top: 200px;
-    left: 165px;
+    left: 0;
   }
 
   .hero-text-container h2 {
@@ -168,11 +164,12 @@ h2 span.heading-highlight::after {
   }
 
   .rings {
-    top: 88px;
+    top: 130px;
+    left: -100px;
   }
   .circle {
     top: 521px;
     z-index: 1;
-    right: 545px;
+    right: 385px;
   }
 }
