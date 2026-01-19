@@ -1,0 +1,55 @@
+:root {
+  --black: #151515;
+  --accent: #4ee1a0;
+  --grey: #242424;
+  --light-accent: #d9d9d9;
+  --white: #ffffff;
+  --main-font: SpceGrotesk;
+}
+
+.bottom-section {
+  padding: 80px 16px;
+  background-color: var(--grey);
+}
+
+#contact {
+  margin-bottom: 86px;
+}
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+.contact-header {
+  font-family: var(--main-font);
+  font-size: 40px;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#contact a {
+  align-self: flex-end;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer h4 {
+  font-size: 32px;
+}
+
+.footer-nav-container ul {
+  display: flex;
+  gap: 26px;
+}
