@@ -28,9 +28,55 @@
 }
 
 .form-container {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.form-container input,
+.form-container textarea {
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  width: 100%;
+  padding-bottom: 16px;
+  padding-left: 1rem;
+  resize: none;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  text-transform: uppercase;
+  color: var(--light-accent);
+}
+
+.form-container textarea {
+  height: 100px;
+}
+
+.input-container span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--light-accent);
+}
+
+.form-container input:focus,
+.form-container input:focus-visible,
+.form-container textarea:focus,
+.form-container textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: currentColor;
 }
 
 #contact a {
@@ -52,4 +98,58 @@ footer h4 {
 .footer-nav-container ul {
   display: flex;
   gap: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    --content-max-width: 1100px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    padding: 84px 0px 92px;
+  }
+  #contact {
+    width: 58%;
+    margin: 0 auto;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 48px 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .bottom-wrapper {
+    width: 1110px;
+  }
+
+  #contact {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 220px;
+  }
+
+  .contact-text {
+    text-align: left;
+    gap: 36px;
+  }
+
+  .form-container {
+    margin-top: 0;
+  }
+
+  .form-container input,
+  .form-container textarea,
+  .form-container input::placeholder,
+  .form-container textarea::placeholder {
+    font-size: 18px;
+  }
 }
