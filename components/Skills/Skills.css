@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 768px) {
   #skills {
-    padding: 3.25rem 1.875rem;
+    padding: 3.25rem 0rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 52px;
@@ -50,7 +50,6 @@
 
 @media screen and (min-width: 1024px) {
   #skills {
-    padding: 4.5rem 10.625rem;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 58px;
