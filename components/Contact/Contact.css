@@ -4,6 +4,7 @@
   --grey: #242424;
   --light-accent: #d9d9d9;
   --white: #ffffff;
+  --red: #ff6f5b;
   --main-font: SpceGrotesk;
 }
 
@@ -61,13 +62,36 @@
   height: 100px;
 }
 
-.input-container span {
+.input-container span.underline {
   position: absolute;
   left: 0;
   bottom: 0;
   height: 2px;
   width: 100%;
   background: var(--light-accent);
+}
+
+.input-container span.underline.correct {
+  background: var(--accent);
+}
+.input-container span.underline.incorrect {
+  background: var(--red);
+}
+
+.input-container span.invalid {
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  color: var(--red);
+}
+
+.input-container span.invalid-sign {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--red);
 }
 
 .form-container input:focus,
@@ -79,8 +103,9 @@
   border-color: currentColor;
 }
 
-#contact a {
+#contact button {
   align-self: flex-end;
+  cursor: pointer;
 }
 
 /* Footer */

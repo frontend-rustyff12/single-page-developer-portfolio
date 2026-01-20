@@ -1,10 +1,42 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import Break from "@/components/ui/Break";
-import Button from "@/components/ui/Button";
+import SubmitButton from "../ui/SubmitButton";
 import { socialsData } from "@/content/contact";
 import "./Contact.css";
 
 export default function Contact() {
+  const [isNameValid, setIsNameValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [submitPressed, setIsSubmitPressed] = useState(false);
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const emailRegex = /.+@.+\..+/;
+    const formData = new FormData(e.currentTarget);
+
+    const userName = formData.get("name")?.toString().trim() || "";
+    const userEmail = formData.get("email")?.toString().trim() || "";
+    const userMessage = formData.get("message")?.toString() || "";
+
+    setIsSubmitPressed(true);
+
+    setIsNameValid(false);
+    setIsEmailValid(false);
+
+    const nameValid = userName.length > 0;
+    const emailValid = emailRegex.test(userEmail);
+
+    setIsNameValid(nameValid);
+    setIsEmailValid(emailValid);
+
+    if (!nameValid || !emailValid) return;
+
+    console.log({ userName, userEmail, userMessage });
+  }
+
   return (
     <div className="bottom-section">
       <div className="bottom-wrapper">
@@ -17,15 +49,35 @@ export default function Contact() {
               possible.
             </p>
           </div>
-          <form className="form-container">
+          <form onSubmit={handleSubmit} className="form-container" noValidate>
             <div className="input-container">
-              <input id="name" type="text" placeholder="name" />
-              <span></span>
+              <input id="name" name="name" type="text" placeholder="name" />
+              <span
+                className={`underline ${
+                  submitPressed ? (isNameValid ? "correct" : "incorrect") : ""
+                }`}
+              ></span>
+              {submitPressed && !isNameValid && (
+                <>
+                  <span className="invalid">Sorry, invalid format here</span>
+                  <span className="invalid-sign">ⓘ</span>
+                </>
+              )}
             </div>
 
             <div className="input-container">
-              <input id="email" type="email" placeholder="email" />
-              <span></span>
+              <input id="email" name="email" type="email" placeholder="email" />
+              <span
+                className={`underline ${
+                  submitPressed ? (isEmailValid ? "correct" : "incorrect") : ""
+                }`}
+              ></span>
+              {submitPressed && !isEmailValid && (
+                <>
+                  <span className="invalid">Sorry, invalid format here</span>
+                  <span className="invalid-sign">ⓘ</span>
+                </>
+              )}
             </div>
 
             <div className="input-container">
@@ -34,10 +86,10 @@ export default function Contact() {
                 id="message"
                 placeholder="message"
               ></textarea>
-              <span></span>
+              <span className="underline"></span>
             </div>
 
-            <Button link="#" name="sned message" />
+            <SubmitButton name="sned message" />
           </form>
         </section>
         <Break hideLarge={false} />
