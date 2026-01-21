@@ -4,6 +4,7 @@ import Image from "next/image";
 import Break from "@/components/ui/Break";
 import SubmitButton from "../ui/SubmitButton";
 import { socialsData } from "@/content/contact";
+import rings from "@/public/images/pattern-rings.svg";
 import "./Contact.css";
 
 export default function Contact() {
@@ -91,6 +92,7 @@ export default function Contact() {
 
             <SubmitButton name="sned message" />
           </form>
+          <Image className="contact-rings" src={rings} height={130} alt="" />
         </section>
         <Break hideLarge={false} />
         <footer>

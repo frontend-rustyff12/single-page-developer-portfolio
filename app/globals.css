@@ -18,6 +18,8 @@
   --grey: #242424;
   --light-accent: #d9d9d9;
   --white: #ffffff;
+  --social-default: var(--light-accent);
+  --social-hover: var(--accent);
   --main-font: SpceGrotesk;
 }
 
@@ -135,6 +137,27 @@ p {
   width: 95%;
   margin: 0 auto;
   margin-top: 80px;
+}
+
+.social-link {
+  color: var(--light-accent); /* fallback if needed, but not used here */
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.35s ease; /* slightly longer often looks better */
+  will-change: filter; /* ← important for smoothness */
+}
+
+.social-icon {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(4%) saturate(192%)
+    hue-rotate(314deg) brightness(108%) contrast(85%);
+}
+
+.social-link:hover .social-icon {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(36%) saturate(746%)
+    hue-rotate(86deg) brightness(94%) contrast(87%);
 }
 
 @media screen and (min-width: 768px) {

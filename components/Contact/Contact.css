@@ -15,6 +15,7 @@
 
 #contact {
   margin-bottom: 86px;
+  position: relative;
 }
 .contact-text {
   display: flex;
@@ -125,6 +126,13 @@ footer h4 {
   gap: 26px;
 }
 
+.contact-rings {
+  position: absolute;
+  bottom: 10px;
+  left: -342px;
+  z-index: 0;
+}
+
 @media screen and (min-width: 768px) {
   .bottom-section {
     display: flex;
@@ -136,10 +144,17 @@ footer h4 {
     margin-right: calc(-50vw + 50%);
     width: 100vw;
     padding: 84px 0px 92px;
+    padding-bottom: 0;
   }
   #contact {
     width: 58%;
     margin: 0 auto;
+    margin-bottom: 92px;
+  }
+
+  .contact-rings {
+    bottom: -65px;
+    left: -542px;
   }
 
   footer {
@@ -176,5 +191,10 @@ footer h4 {
   .form-container input::placeholder,
   .form-container textarea::placeholder {
     font-size: 18px;
+  }
+
+  .contact-rings {
+    bottom: -65px;
+    left: -400px;
   }
 }
